@@ -55,7 +55,7 @@ export function Navbar() {
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center space-x-1 p-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md">
                         {navLinks.map((link) => {
-                            const isActive = pathname === link.href;
+                            const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
                             return (
                                 <Link
                                     key={link.name}
@@ -133,15 +133,15 @@ export function Navbar() {
                     >
                         <div className="px-4 pt-4 pb-8 space-y-2 flex flex-col">
                             {navLinks.map((link) => {
-                                const isActive = pathname === link.href;
+                                const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
                                 return (
                                     <Link
                                         key={link.name}
                                         href={link.href}
                                         onClick={handleLinkClick}
                                         className={`block px-4 py-4 text-center text-lg font-semibold rounded-xl transition-colors ${isActive
-                                                ? "bg-black/10 dark:bg-white/10 text-gray-900 dark:text-white"
-                                                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
+                                            ? "bg-black/10 dark:bg-white/10 text-gray-900 dark:text-white"
+                                            : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
                                             }`}
                                     >
                                         {link.name}
