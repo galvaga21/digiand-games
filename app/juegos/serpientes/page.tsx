@@ -1,4 +1,4 @@
-import { SnakesLadders } from "@/components/SnakesLadders";
+import { SnakesLadders } from "../../../components/SnakesLadders";
 
 export const metadata = {
     title: "Serpientes y Escaleras - Digiand Games",
