@@ -25,6 +25,15 @@ export default function JuegosDashboard() {
             gradient: "from-green-500 to-red-600",
             iconColor: "text-green-400",
             glowBg: "bg-green-500/20",
+        },
+        {
+            id: "snake",
+            title: "Snake Neón",
+            description: "Controla la víbora clásica en un tablero de cristal interactivo.",
+            path: "/juegos/snake",
+            gradient: "from-emerald-500 to-lime-500",
+            iconColor: "text-emerald-400",
+            glowBg: "bg-emerald-500/20",
         }
     ];
 
